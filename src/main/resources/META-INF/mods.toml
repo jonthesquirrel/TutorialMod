@@ -1,0 +1,53 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[32,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+license="All rights reserved"
+
+issueTrackerURL="https://github.com/jonthesquirrel/TutorialMod/issues" #optional
+
+[[mods]] #mandatory
+
+modId="tutorial" #mandatory
+
+version="1.16.1-1.0.0" #mandatory
+
+displayName="Tutorial Mod" #mandatory
+
+updateJSONURL="https://example.com" #optional
+
+displayURL="https://github.com/jonthesquirrel/TutorialMod" #optional
+
+logoFile="examplemod.png" #optional
+
+credits="Thanks to TechnoVision's forge modding tutorial" #optional
+
+authors="jonthesquirrel" #optional
+
+description='''
+A tutorial mod to learn forge modding.
+'''
+
+[[dependencies.examplemod]] #optional
+
+    modId="forge" #mandatory
+
+    mandatory=true #mandatory
+
+    versionRange="[32,)" #mandatory
+
+    ordering="NONE"
+
+    side="BOTH"
+
+[[dependencies.examplemod]]
+
+    modId="minecraft"
+
+    mandatory=true
+
+    versionRange="[1.16.1]"
+
+    ordering="NONE"
+
+    side="BOTH"
