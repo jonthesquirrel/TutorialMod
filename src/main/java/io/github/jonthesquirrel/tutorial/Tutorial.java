@@ -1,6 +1,8 @@
 package io.github.jonthesquirrel.tutorial;
 
 import io.github.jonthesquirrel.tutorial.util.RegistryHandler;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -31,4 +33,12 @@ public class Tutorial {
     private void doClientStuff(final FMLClientSetupEvent event) {
 
     }
+
+    public static final ItemGroup TAB = new ItemGroup("tutorialTab") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.RUBY.get());
+        }
+    };
+
 }
