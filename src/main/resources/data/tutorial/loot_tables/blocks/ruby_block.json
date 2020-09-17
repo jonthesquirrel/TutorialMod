@@ -5,8 +5,23 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "tutorial:ruby_block"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 1,
+                    "max": 6,
+                    "type": "minecraft:uniform"
+                  }
+                }
+              ],
+              "name": "tutorial:ruby_block"
+            }
+          ]
         }
       ]
     }
