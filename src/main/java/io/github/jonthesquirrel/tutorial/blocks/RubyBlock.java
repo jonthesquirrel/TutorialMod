@@ -13,6 +13,8 @@ public class RubyBlock extends Block {
                 .sound(SoundType.METAL)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool()
+                .setLightLevel(value -> 15)
         );
     }
 
