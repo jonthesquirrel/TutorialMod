@@ -14,7 +14,7 @@
     },
     "d":
     {
-      "item": "minecraft:diamond"
+      "tag": "forge:gems/diamond"
     }
   },
   "result":
