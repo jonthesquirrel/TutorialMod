@@ -2,7 +2,6 @@ package io.github.jonthesquirrel.tutorial.util;
 
 import io.github.jonthesquirrel.tutorial.Tutorial;
 import io.github.jonthesquirrel.tutorial.armor.ModArmorMaterial;
-import io.github.jonthesquirrel.tutorial.blocks.BlockItemBase;
 import io.github.jonthesquirrel.tutorial.blocks.RubyBlock;
 import io.github.jonthesquirrel.tutorial.items.ItemBase;
 import io.github.jonthesquirrel.tutorial.items.PoisonApple;
@@ -66,10 +65,16 @@ public class RegistryHandler {
 
     // Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
+    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyBlock::new);
 
     // Block Items
-    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () ->
-            new BlockItemBase(RUBY_BLOCK.get())
+    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register(
+            "ruby_block",
+            () -> new BlockItem(RUBY_BLOCK.get(), new Item.Properties().group(Tutorial.TAB))
+    );
+    public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register(
+            "ruby_ore",
+            () -> new BlockItem(RUBY_ORE.get(), new Item.Properties().group(Tutorial.TAB))
     );
 
 }
