@@ -1,11 +1,13 @@
 package io.github.jonthesquirrel.tutorial.util;
 
 import io.github.jonthesquirrel.tutorial.Tutorial;
+import io.github.jonthesquirrel.tutorial.armor.ModArmorMaterial;
 import io.github.jonthesquirrel.tutorial.blocks.BlockItemBase;
 import io.github.jonthesquirrel.tutorial.blocks.RubyBlock;
 import io.github.jonthesquirrel.tutorial.items.ItemBase;
 import io.github.jonthesquirrel.tutorial.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,21 +31,35 @@ public class RegistryHandler {
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
             new SwordItem(ModItemTier.RUBY, 2, -2.4f, new Item.Properties().group(Tutorial.TAB))
     );
-
     public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () ->
             new PickaxeItem(ModItemTier.RUBY, 0, -2.8f, new Item.Properties().group(Tutorial.TAB))
     );
-
     public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () ->
             new ShovelItem(ModItemTier.RUBY, 0.5f, -3.0f, new Item.Properties().group(Tutorial.TAB))
     );
-
     public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", () ->
             new AxeItem(ModItemTier.RUBY, 5, -3.1f, new Item.Properties().group(Tutorial.TAB))
     );
-
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
             new HoeItem(ModItemTier.RUBY, -1.0f, new Item.Properties().group(Tutorial.TAB))
+    );
+
+    // Armor
+    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register(
+            "ruby_helmet",
+            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB))
+    );
+    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register(
+            "ruby_chestplate",
+            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(Tutorial.TAB))
+    );
+    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register(
+            "ruby_leggings",
+            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(Tutorial.TAB))
+    );
+    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register(
+            "ruby_boots",
+            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB))
     );
 
     // Blocks
