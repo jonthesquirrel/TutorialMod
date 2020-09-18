@@ -2,7 +2,9 @@ package io.github.jonthesquirrel.tutorial.util;
 
 import io.github.jonthesquirrel.tutorial.Tutorial;
 import io.github.jonthesquirrel.tutorial.armor.ModArmorMaterial;
+import io.github.jonthesquirrel.tutorial.blocks.Oven;
 import io.github.jonthesquirrel.tutorial.blocks.RubyBlock;
+import io.github.jonthesquirrel.tutorial.blocks.RubyOre;
 import io.github.jonthesquirrel.tutorial.items.ItemBase;
 import io.github.jonthesquirrel.tutorial.items.PoisonApple;
 import io.github.jonthesquirrel.tutorial.tools.ModItemTier;
@@ -65,7 +67,8 @@ public class RegistryHandler {
 
     // Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
-    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyBlock::new);
+    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
+    public static final RegistryObject<Block> OVEN = BLOCKS.register("oven", Oven::new);
 
     // Block Items
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register(
@@ -75,6 +78,10 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register(
             "ruby_ore",
             () -> new BlockItem(RUBY_ORE.get(), new Item.Properties().group(Tutorial.TAB))
+    );
+    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register(
+            "oven",
+            () -> new BlockItem(OVEN.get(), new Item.Properties().group(Tutorial.TAB))
     );
 
 }
