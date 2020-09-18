@@ -5,6 +5,7 @@ import io.github.jonthesquirrel.tutorial.armor.ModArmorMaterial;
 import io.github.jonthesquirrel.tutorial.blocks.BlockItemBase;
 import io.github.jonthesquirrel.tutorial.blocks.RubyBlock;
 import io.github.jonthesquirrel.tutorial.items.ItemBase;
+import io.github.jonthesquirrel.tutorial.items.PoisonApple;
 import io.github.jonthesquirrel.tutorial.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -26,6 +27,7 @@ public class RegistryHandler {
 
     // Items
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+    public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
 
     // Tools
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
