@@ -1,6 +1,7 @@
 package io.github.jonthesquirrel.tutorial;
 
-import io.github.jonthesquirrel.tutorial.util.RegistryHandler;
+import io.github.jonthesquirrel.tutorial.init.ModBlocks;
+import io.github.jonthesquirrel.tutorial.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,7 +22,8 @@ public class Tutorial {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        RegistryHandler.init();
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -37,7 +39,7 @@ public class Tutorial {
     public static final ItemGroup TAB = new ItemGroup("tutorialTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.RUBY.get());
+            return new ItemStack(ModItems.RUBY.get());
         }
     };
 

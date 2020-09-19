@@ -1,7 +1,7 @@
 package io.github.jonthesquirrel.tutorial.world.gen;
 
 import io.github.jonthesquirrel.tutorial.Tutorial;
-import io.github.jonthesquirrel.tutorial.util.RegistryHandler;
+import io.github.jonthesquirrel.tutorial.init.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -40,7 +40,7 @@ public class ModOreGen {
                         5,
                         80,
                         OreFeatureConfig.FillerBlockType.NETHERRACK,
-                        RegistryHandler.RUBY_ORE.get().getDefaultState(),
+                        ModBlocks.RUBY_ORE.get().getDefaultState(),
                         4
                 );
             } else if (biome.getCategory() == Biome.Category.THEEND) {
@@ -51,7 +51,7 @@ public class ModOreGen {
                         5,
                         80,
                         END_STONE,
-                        RegistryHandler.RUBY_ORE.get().getDefaultState(),
+                        ModBlocks.RUBY_ORE.get().getDefaultState(),
                         12
                 );
             } else { // Overworld and modded dimensions
@@ -62,7 +62,7 @@ public class ModOreGen {
                         5,
                         50,
                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                        RegistryHandler.RUBY_ORE.get().getDefaultState(),
+                        ModBlocks.RUBY_ORE.get().getDefaultState(),
                         6
                 );
             }

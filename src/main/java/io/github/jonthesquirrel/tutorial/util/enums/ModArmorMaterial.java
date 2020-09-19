@@ -1,7 +1,7 @@
-package io.github.jonthesquirrel.tutorial.armor;
+package io.github.jonthesquirrel.tutorial.util.enums;
 
 import io.github.jonthesquirrel.tutorial.Tutorial;
-import io.github.jonthesquirrel.tutorial.util.RegistryHandler;
+import io.github.jonthesquirrel.tutorial.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
@@ -21,7 +21,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
             18,
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
             0.0f,
-            () -> { return Ingredient.fromItems(RegistryHandler.RUBY.get()); },
+            () -> { return Ingredient.fromItems(ModItems.RUBY.get()); },
             0
     );
 

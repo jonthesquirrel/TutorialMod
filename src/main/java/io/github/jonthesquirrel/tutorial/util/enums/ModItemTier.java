@@ -1,6 +1,6 @@
-package io.github.jonthesquirrel.tutorial.tools;
+package io.github.jonthesquirrel.tutorial.util.enums;
 
-import io.github.jonthesquirrel.tutorial.util.RegistryHandler;
+import io.github.jonthesquirrel.tutorial.init.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier {
 
     RUBY(3, 800, 7.0f, 3.0f, 12, () -> {
-        return Ingredient.fromItems(RegistryHandler.RUBY.get());
+        return Ingredient.fromItems(ModItems.RUBY.get());
     });
 
     private final int harvestLevel;
